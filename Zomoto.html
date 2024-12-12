@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" href="https://i.pinimg.com/originals/1a/17/ed/1a17ed134ffeb3461f5d0f3ca0ee227d.png">
+    <link rel="icon" href="https://i.pinimg.com/originals/1a/17/ed/1a17ed134ffeb3461f5d0f3ca0ee227d.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+       body{
+        padding: 0px;
+        margin: 0px;
+        text-decoration: none;
+        font-family: sans-serif;
+        font-weight: lighter;
+        overflow-x: hidden;
+       }
+       header{
+        width: 100%;
+        height: 70vh; 
+        overflow: hidden;
+        position: relative;
+        object-fit: cover;
+       }
+       .header-img {
+        
+        position: absolute;
+        top: -20vh;
+        z-index: -1;
+       
+       }
+       .nav-bar{
+        display: flex;
+          color: white;
+          justify-content: space-between;
+          
+       }
+       .nav{
+        display: flex;
+        float: right;
+       }
+       .nav li{
+        list-style: none;
+        padding-left: 30px;
+       }
+       .logo{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 7vh;
+       }
+       .logo_img{
+        width: 29vw;
+       }
+       header h3{
+        font-size: 1.7em;
+        color: whitesmoke;
+        font-weight: lighter;
+       }
+       .search{
+        display: flex;
+        width: 55vw;
+        align-items: center;
+        justify-content: flex-start;
+        border-radius: 10px;
+        background: #ffffff;
+        /* grid-gap: 10px; */
+        padding: 5px 0px;
+        padding-left: 10px;
+       }
+       .search input{
+        outline: none;
+        border: none;
+        padding-left: 6px;
+        font-size: 15px;
+       }
+       .search p{
+        border-right: 2px solid black ;
+        padding-right: 10px;
+        font-size: 15px;
+        color: gray;
+        margin-right: 5px;
+        
+       }
+       .search i:first-child{
+        padding-left: 10px;
+        padding-right: 6px;
+        font-size: 17px;
+        color: rgb(255, 119, 119);
+       }
+       .search i{
+        color: gray;
+       }
+       .sec-1{
+        display: flex;
+        margin-top: 50px;
+        /* align-items: center; */
+        justify-content: center;
+        
+       }
+       .box1{
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0px 1px 2px gray;
+        margin: 3px 10px;
+        background: #ffffff;
+        border-radius: 15px;
+        
+       }
+       .box1 img{
+        width: 100%;
+        border-radius: 15px;
+        height: 200px;
+        z-index: -1;
+       }
+       .box1 img:hover{
+        cursor: pointer;
+        height: 190px;
+       }
+       .one{
+        position: absolute;
+        text-align: center;
+        bottom:3px;
+        align-items: center;
+        border-radius: 0 0 15px 15px;
+        width: 100%;
+        height: 25%;
+        z-index: 2;
+        background-color: #fff;
+        
+       }
+       .one span{
+        text-align: center;
+        letter-spacing: 0.7px;
+        font-size: 1em;
+        color: rgb(56,56,56);
+
+       }
+       .middle{
+         display: flex;
+         flex-direction: column;
+         margin: 60px 200px;
+       }
+      
+       .sec2 h1{
+         font-size: xx-large;
+         font-weight: lighter;
+         margin-bottom: 0px;
+         padding-bottom: 0%;
+       }
+       .sec2 div{
+         font-weight: lighter;
+         
+       }
+       .sec2 div>h3{
+         font-weight: lighter;
+         margin-top: 14px;
+       }
+        .sec2 div{
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 20px;
+       } 
+       .sec3{
+         display: flex;
+         flex-direction: row;
+       }
+       .secbox{
+         position: relative;
+        overflow: hidden;
+        box-shadow: 0px 1px 2px gray;
+        margin: 3px 10px;
+        width:250px;
+        height: 400px;
+        border-radius: 15px;
+        color: #fff;
+       }
+       .secbox img{
+         width: 100%;
+         height:100%;
+        border-radius: 15px;
+        
+     
+       }
+       .box-2{
+       position: absolute;
+        bottom:2px;
+        width: 100%;
+        height: 15%;
+      }
+      .box-2 span{
+         margin-top: 50px;
+      }
+     .middle h1{
+      margin-top: 70px;
+      font-size: xxx-large;
+      font-weight: lighter;
+     }
+     .sec4{
+      margin-left: 20px;
+        display: grid;
+        /* justify-content: center; */
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: auto;
+     }
+     .inbox{
+      border: 1px solid rgb(235, 233, 233);
+      box-shadow: 0 1px 3px rgb(226,223,223) ;
+      padding: 7px;
+      border-radius: 10px;
+      width: 300px;
+      height: 50px;
+      
+      display: flex;
+      align-items: center;
+      
+      /* overflow: hidden; */
+     }
+     .inbox div{
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+     }
+      
+     .inbox div span{
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+     }
+     .getApp{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 100px;
+      grid-column-gap: 40px;
+      margin-bottom: 100px;
+     }
+     .phoneimg{
+        padding: 20px;
+       
+     }
+     .phoneimg img{
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      box-shadow: 0px 10px 10px rgb(128, 128, 128);
+     }
+     .head{
+      font-size: xx-large;
+      font-family: sans-serif;
+      font-weight: lighter;
+      margin-bottom: 20px;
+     }
+     
+     
+     .description{
+      font-size: large;
+      font-family: sans-serif;
+      color: rgb(35, 35, 35);
+      font-weight: lighter;
+      margin-top: 0px;
+     }
+     .options{
+      margin-bottom: 20px;
+      display: flex;
+      grid-gap: 30px;
+     }
+     .options div{
+      font-size: large;
+      color: rgb(95, 94, 94);
+     }
+     .options div>input{
+      size: 20px;
+      padding: 0px;
+     }
+     .mail-row{
+      margin-bottom: 20px;
+     }
+     .mail-row input{
+      border: 1px solid gray;
+      width: 200px;
+      border-radius: 15px;
+      padding:15px ;
+   }
+   .mail-row button{
+      background-color: rgba(255, 0, 0, 0.724);
+      border: none;
+      padding:15px;
+      border-radius: 10px;
+      color: white;
+   }
+   .rec{
+      font-size: large;
+      font-family: sans-serif;
+      color: rgb(95, 94, 94);
+      font-weight: lighter;
+      margin-bottom: 10px;
+     }
+     .stores-row{
+      display:flex;
+      grid-gap: 20px;
+     }
+   .stores-row img{
+     width: 150px;
+   }
+   .end{
+      margin: 200px 0px;   
+   }
+   .sec5{
+     width: 1000px;
+     margin-left: 200px;
+   }
+   .sec5 h1{
+      font-size: xx-large;
+      font-family: sans-serif;
+      font-weight: lighter; 
+   }
+   .subsec{
+      margin-left: 20px;
+   }
+   .subsec h4{
+      font-size: large;
+      font-family: sans-serif;
+      font-weight: lighter; 
+      
+   }
+   .subsec div a{
+      text-decoration: none;
+      color: gray;
+      font-size:0.95rem ;
+   }
+   .subsec div i{
+      font-size: 0.4rem;
+      color: gray;
+      margin-bottom: 20px;
+      padding:5px 7px;
+   }
+   .footer{
+      padding:0px 200px;
+   }
+   .first{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 70px;
+   }
+   .second{
+      display: flex;
+      flex-direction: row;
+      grid-gap: 100px;
+   }
+  .second div div{
+   display: flex;
+   flex-direction: column;
+  }
+  .second div a{
+   text-decoration: none;
+  }
+  .text {
+   display: flex;
+   flex-direction: row;
+   grid-gap: 10px;
+   
+  }
+  .text div{
+   border: 1px solid gray;
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:0px 8px ;
+   grid-gap: 4px;
+  }
+
+    </style>
+    <title>Zomoto</title>
+</head>
+<body>
+    <header>
+       
+       <div class="nav-bar">
+       <div>
+        <h5>Get The App</h5>
+       </div>
+        <ul class="nav">
+            <li>Add restaurent</li>
+            <li>Log in</li>
+            <li>Sign up</li>
+        </ul>
+       </div>
+       <div class="logo">
+        <img class="logo_img" src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png" alt="">
+        <h3>Discover the best food & drinks in Hyderabd</h3>
+        <div class="search">
+           <i class="fa-solid fa-location-dot"></i>
+           <p>Saidabad,Hyderabd</p> 
+           <i class="fa-solid fa-magnifying-glass"></i>
+           <input type="text" placeholder="Search for the restaurent" >
+        </div>
+       </div>
+        
+       <div class="header-img">
+        <img  src="headerimg.jpg">  
+       </div> 
+    </header>
+    <sectiom class="sec-1">
+       <div class="box1">
+        <div class="one"><span>Order Food Online</span></div>
+        <img src="img1.jpg">
+       </div>
+       <div class="box1">
+         <div class="one"><span>Order Food Online</span></div>
+         <img src="img1.jpg">
+        </div>
+        <div class="box1">
+         <div class="one"><span>Order Food Online</span></div>
+         <img src="img1.jpg">
+        </div>
+        <div class="box1">
+         <div class="one"><span>Order Food Online</span></div>
+         <img src="img1.jpg">
+        </div>
+    </sectiom>
+    <section class="middle">
+         <section class="sec2">
+            <h1>Collectons</h1>
+            <div><h3>Explore lists of top restaurants, cafes, pubs, and bars in Hyderabad, based on trends</h3><p>All collections in Hyderabad &nbsp;<i class="fas fa-caret-right"></i></p></div>
+         </section>
+         <section class="sec3">
+            <div class="secbox">
+               <div class="box-2"><span class="msg">Newly Opened <br> 10 plsces<i class="fas fa-caret-right"></i></span></div>
+               <img src="19 Shopping mall at night.jpg" >
+            </div>
+            <div class="secbox">
+               <div class="box-2"><span class="msg">Newly Opened <br> 10 plsces<i class="fas fa-caret-right"></i></span></div>
+               <img src="19 Shopping mall at night.jpg" >
+            </div>
+            <div class="secbox">
+               <div class="box-2"><span class="msg">Newly Opened <br> 10 plsces<i class="fas fa-caret-right"></i></span></div>
+               <img src="19 Shopping mall at night.jpg" >
+            </div>
+            <div class="secbox">
+               <div class="box-2"><span class="msg">Newly Opened <br> 10 plsces<i class="fas fa-caret-right"></i></span></div>
+               <img src="19 Shopping mall at night.jpg" >
+            </div>
+         </section>
+        <h1>Popular localities in and around <strong>Hyderabad</strong></h1>
+        <section class="sec4">
+           <section class="inbox">
+            <div ><span>Jubilee Hills,vb nmjnm ,near indranagar,Hyderabd</span><i class="fas fa-chevron-right"></i></div>
+           </section>
+           <section class="inbox">
+            <div><span>Jubilee Hills,near indranagarhbnm ,Hyderabd</span><i class="fas fa-chevron-right"></i></div>
+           </section>
+           <section class="inbox">
+            <div><span>Jubilee Hills,near indragar,Hyderabd</span><i class="fas fa-chevron-right"></i></div>
+           </section>
+           <section class="inbox">
+            <div><span>Jubilee Hills,near indrankbhjmn agar,Hyderabd</span><i class="fas fa-chevron-right"></i></div>
+           </section>
+           <section class="inbox">
+            <div ><span>Jubilee Hills,near indranagar,Hyderabd</span><i class="fas fa-chevron-right"></i></div>
+           </section>
+           <section class="inbox">
+            <div ><span>Jubilee Hills,near indranagar,Hyderabd</span><i class="fas fa-chevron-right"></i></div>
+           </section>
+           <section class="inbox">
+            <div ><span>Jubilee Hills,near indranagar,Hyderabd</span><i class="fas fa-chevron-right"></i></div>
+           </section>
+           <section class="inbox">
+            <div ><span>Jubilee Hills,near indranagar,Hyderabd</span><i class="fas fa-chevron-right"></i></div>
+           </section>
+           <section class="inbox">
+            <div ><span>Jubilee Hills,near indranagar,Hyderabd</span><i class="fas fa-chevron-right"></i></div>
+           </section>
+        </section>
+    </section>
+    <section class="getApp">
+      <div class="phoneimg">
+        <img src="getApp.png" alt="phone-img">
+      </div>
+      <div class="info">
+         <h1 class="head">Get the Zomato app</h1>
+         <h6 class="description">We will send you a link, open it on your phone to download the app</h6>
+         <div class="options">
+           <div> <input type="radio" name="ways" id="login"><lable>Email</lable></div>
+            <div><input type="radio" name="ways" id="login"><lable>Phone</lable></div>
+         </div>
+         <div class="mail-row">
+            <input type="email" placeholder="Email">
+            <button>Share App Link</button>
+         </div>
+         <h6 class="rec">Download app from</h6>
+         <div class="stores-row">
+            <img src="AppStore.png" alt="AppStore">
+            <img src="PlayStore.png" alt="PlayStore">
+         </div>
+      </div>
+    </section>
+    <section class="end">
+      <div class="sec5">
+         <h1>Explore options near me</h1>
+        <div class="subsec">
+         <h4>Popular cuisines near me</h4>
+         <div>
+            <a href="..">Bakery food near me</a><i class="fas fa-circle"></i>
+            <a href="..">Beverages food near me</a><i class="fas fa-circle"></i>
+            <a href="..">Burger food near me</a><i class="fas fa-circle"></i>
+            <a href="..">Chinese food near me</a><i class="fas fa-circle"></i>
+            <a href="..">Cofee food near me</a><i class="fas fa-circle"></i>
+            <a href="..">Continental food near me</a><i class="fas fa-circle"></i>
+            <a href="..">Desserts food near me</a><i class="fas fa-circle"></i>
+            <a href=".." href="..">Bakery food near me</a><i class="fas fa-circle"></i>
+            <a href="..">Bakery food near me</a><i class="fas fa-circle"></i>
+            <a href="..">Bakery food near me</a><i class="fas fa-circle"></i>
+            <a href="..">Shake food near me</a><i class="fas fa-circle"></i>
+            <a href="..">Street food near me</a><i class="fas fa-circle"></i>
+            <a href="..">Street food near me</a><i class="fas fa-circle"></i>
+            <a href="..">Street food near me</a><i class="fas fa-circle"></i>
+            <a href="..">Sandwitch food near me</a><i class="fas fa-circle"></i>
+         </div >
+         <div class="subsec">
+            <h4>Popular cuisines near me</h4>
+            <div>
+               <a href="..">Bakery food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Beverages food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Burger food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Chinese food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Cofee food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Continental food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Desserts food near me</a><i class="fas fa-circle"></i>
+               <a href=".." href="..">Bakery food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Bakery food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Bakery food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Shake food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Street food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Street food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Street food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Sandwitch food near me</a><i class="fas fa-circle"></i>
+            </div >
+            <h4>Popular cuisines near me</h4>
+            <div>
+               <a href="..">Bakery food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Beverages food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Burger food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Chinese food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Cofee food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Continental food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Desserts food near me</a><i class="fas fa-circle"></i>
+               <a href=".." href="..">Bakery food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Bakery food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Bakery food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Shake food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Street food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Street food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Street food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Sandwitch food near me</a><i class="fas fa-circle"></i>
+            </div >
+            <h4>Popular cuisines near me</h4>
+            <div>
+               <a href="..">Bakery food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Beverages food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Burger food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Chinese food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Cofee food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Continental food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Desserts food near me</a><i class="fas fa-circle"></i>
+               <a href=".." href="..">Bakery food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Bakery food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Bakery food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Shake food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Street food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Street food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Street food near me</a><i class="fas fa-circle"></i>
+               <a href="..">Sandwitch food near me</a><i class="fas fa-circle"></i>
+            </div >
+        </div> 
+      </div>
+    </section>
+    <section class="footer">
+      <div class="first">
+         <div>
+            <img src="zomatoB.png" alt="Zomato">
+         </div>
+         <div class="text">
+            <div>
+               <span>India</span><i class="fas fa-chevron-down"></i>
+            </div>
+            <div>
+               <span>English</span><i class="fas fa-chevron-down"></i>
+            </div>
+         </div>
+      </div>
+      <div class="second">
+         <div>
+            <h4>ABOUT ZOMATO</h4>
+            <div>
+            <a href="..">Who We Are</a>
+            <a href="..">Blog</a>
+            <a href="..">Work With Us</a>
+            <a href="..">Investors Relations</a>
+            <a href="..">Report Fraud</a>
+            </div>
+         </div>
+         <div>
+            <h4>ZOMAVERSE</h4>
+            <div>
+            <a href="..">Zomato</a>
+            <a href="..">Blinkit</a>
+            <a href="..">Feeding India</a>
+            <a href="..">Zomaland</a>
+            <a href="..">Report Fraud</a>
+         </div>
+         </div>
+         <div>
+            <h4>FOR RESTAURANTS</h4>
+            <div>
+            <a href="..">Patner With Us</a>
+            <a href="..">Apps For You</a>
+            </div>
+         </div>
+         <div>
+            <div>
+            <h4>LEARN MORE</h4>
+            <a href="..">Privacy</a>
+            <a href="..">Security</a>
+            <a href="..">Terms</a>
+            <a href="..">Sitemap</a>
+          </div>  
+         </div>
+         <div>
+            <h4>SOCIAL LINKS</h4>  
+         </div>
+      </div>
+    </section>
+</body>
+</html>
